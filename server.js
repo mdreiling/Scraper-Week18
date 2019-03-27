@@ -41,7 +41,7 @@ app.use(logger("dev"));
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
-app.use(espress.json());
+app.use(express.json());
 
 // Set public as static folder
 app.use(express.static("public"));
@@ -69,8 +69,8 @@ app.get("/scrape", function(req, res) {
             // Save an empty result object to be filled later
             var result = {};
 
-            // Pull `title` of each article
-            result.title = $(this)
+            // Pull `headline` of each article
+            result.headline = $(this)
                 .children("div.item-info-wrap")
                 .children("div.item-info")
                 .children("h2.title")

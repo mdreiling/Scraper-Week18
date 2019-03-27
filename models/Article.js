@@ -25,6 +25,12 @@ var ArticleSchema = new Schema({
         required: true
     },
 
+    // Article `image` is required and of type String
+    image: {
+        type: String,
+        required: true
+    },
+
     // Comment object that stores a Comment ID to reference to the Comment Model
     comment: {
         type: Schema.Types.ObjectId,
