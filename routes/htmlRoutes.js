@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
 
         // Promise function to push result into client
         .then(function(article) {
-            res.render("index",{article: article});
+            res.render("index", {article: article});
         })
 
         // Catch function in case an error occurs. Send error to client
